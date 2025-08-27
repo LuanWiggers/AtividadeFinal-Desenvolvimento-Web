@@ -1,20 +1,13 @@
-class MobileNavbar{
-    constructor(){
-        this.burguer = document.querySelector(MobileMenu);
-        this.navList = document.querySelector(navLinks);
-        this.navLinks = document.querySelectorAll(navList);
-        this.active= "active";
-    }
-
-    addClickEvent(){
-        this.mobileMenu.addEventListener("click", () => console.log(" Hey™ "));
-    }
-
-    Init(){
-        if(this.mobileMenu) {
-            this.addClickEvent();
+function valproc(){
+// Dropdown abre/fecha ao clicar no link principal
+document.querySelectorAll(".dropdown > a").forEach(link => {
+    link.addEventListener("click", function(e) {
+        // se estiver em tela pequena, impede pular de seção
+        if (window.innerWidth <= 999) {
+            e.preventDefault();
+            const submenu = this.nextElementSibling;
+            submenu.classList.toggle("active");
         }
-        return this;
-    }
-    
+    });
+});
 }
