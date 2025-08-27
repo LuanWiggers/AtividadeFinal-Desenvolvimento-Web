@@ -6,6 +6,7 @@
 }
 
 body {
+    overflow-x: hidden;
     font-family: 'Source Code Pro', monospace;
     background-color: #0d1117; /* preto escuro github-style */
     color: #c9d1d9; /* cinza claro */
@@ -20,8 +21,10 @@ a {
 }
 
 a:hover {
+    opacity: 0.7;
     color: #1f6feb;
     text-decoration: underline;
+    transition: 0.3s;
 }
 
 .btn {
@@ -54,15 +57,20 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     max-width: 1200px;
+    align-items: center;
     margin: 0 auto;
+    height: 6vh;
 }
 
 .logo {
     font-weight: 700;
-    font-size: 1.8rem;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
     color: #58a6ff;
 }
 
@@ -95,14 +103,19 @@ nav {
 }
 
 .burger div {
-    width: 25px;
-    height: 3px;
-    background-color: #8b949e;
+    width: 32px;
+    height: 2px;
+    background-color: #fff;
+    margin: 8px;
     transition: 0.3s;
 }
 
 /* Main content */
 main {
+    background:url("bg.jpg")no-repeat
+    center center;
+    background-size: cover;
+    height: 92vh;
     padding: 6rem 5% 3rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -339,8 +352,19 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-    .nav-links {
+@media (max-width: 999px) {
+    .nav-links  {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        letter-spacing: 3px;
+        margin-left: 32px;
         display: none;
     }
     .burger {
@@ -365,6 +389,10 @@ footer {
 
     .projects-container {
         grid-template-columns: 1fr;
+    }
+    .burguer{
+        display: block;
+
     }
     
 }
