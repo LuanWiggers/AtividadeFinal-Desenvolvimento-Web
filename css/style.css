@@ -28,6 +28,7 @@ header {
     top: 0;
     z-index: 1000; /* garante que fique acima do resto */
     box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* sombra sutil */
+    
 }
 
 nav {
@@ -185,6 +186,8 @@ footer {
         height: 0;
         overflow: hidden;
         transition: height 0.3s ease-in;
+       
+
     }
 
     .nav-links.open {
@@ -212,4 +215,29 @@ footer {
     .submenu.active {
         display: flex; /* aparece quando clicado */
     }
+    footer{
+       margin-top: 200px;
+    }
+    .h1{
+        text-align: justify;
+        position: relative;
+        left: 50px;
+        top: 100px;
+    }
+    .main{
+        position: absolute;
+        top: 50px;              /*mesmo caso do h1*/
+        left: 0px;
+        transform: translateY(-50%);
+    }
+    .container{
+        position: relative;
+        left: 50px;
+        top: 100px;             
+        right: 100px;
+        bottom: 100px;
+    }
+    
+    
 }
+
