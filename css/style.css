@@ -1,120 +1,92 @@
-/* ==========================
-   RESET BÁSICO
-   ========================== */
-/* Isso remove as margens e espaçamentos padrões do navegador */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* faz largura e altura incluírem padding e borda */
+    box-sizing: border-box;
 }
 
-/* ==========================
-   ESTILO DO BODY
-   ========================== */
 body {
-    font-family: 'Source Code Pro', monospace; /* fonte estilo terminal */
-    background-color: #0d1117; /* fundo escuro */
-    color: #c9d1d9; /* cor clara para o texto */
-    line-height: 1.6; /* deixa o texto mais fácil de ler */
+    font-family: 'Source Code Pro', monospace;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    line-height: 1.6;
 }
 
-/* ==========================
-   CABEÇALHO E NAVBAR
-   ========================== */
 header {
-    background: #161b22; /* cor do fundo do header */
-    padding: 1rem 2rem; /* espaçamento interno */
-    position: sticky; /* fica no topo ao rolar a página */
+    background: #161b22;
+    padding: 1rem 2rem;
+    position: sticky;
     top: 0;
-    z-index: 1000; /* garante que fique acima do resto */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* sombra sutil */
-    
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 nav {
-    display: flex; /* coloca itens em linha */
-    align-items: center; /* centraliza verticalmente */
-    justify-content: space-between; /* espaço entre logo e menu */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-/* ==========================
-   LOGO
-   ========================== */
 .logo {
-    color: #58a6ff; /* azul */
-    font-weight: bold; 
+    color: #58a6ff;
+    font-weight: bold;
     font-size: 1.3rem;
 }
 
-/* ==========================
-   LINKS DO MENU PRINCIPAL
-   ========================== */
 .nav-links {
-    list-style: none; /* tira bolinhas da lista */
-    display: flex; /* coloca os links lado a lado */
-    gap: 2rem; /* espaço entre links */
+    list-style: none;
+    display: flex;
+    gap: 2rem;
     align-items: center;
-    position: relative; /* necessário para submenus */
+    position: relative;
 }
 
 .nav-links li {
-    position: relative; /* cada link pode ter submenu */
+    position: relative;
 }
 
 .nav-links a {
     color: #c9d1d9;
-    text-decoration: none; /* tira sublinhado */
-    transition: 0.3s; /* suaviza mudanças de cor */
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .nav-links a:hover {
-    color: #58a6ff; /* azul ao passar o mouse */
+    color: #58a6ff;
 }
 
-/* ==========================
-   SUBMENUS (DROPDOWN)
-   ========================== */
 .submenu {
     list-style: none;
-    position: absolute; /* fica "flutuando" abaixo do link pai */
-    top: 100%; /* logo abaixo do link principal */
+    position: absolute;
+    top: 100%;
     left: 0;
     background: #161b22;
     border: 1px solid #30363d;
-    display: none; /* escondido por padrão */
-    flex-direction: column; /* itens do submenu em coluna */
-    min-width: 200px; 
+    display: none;
+    flex-direction: column;
+    min-width: 200px;
     padding: 0.5rem 0;
     z-index: 200;
-    border-radius: 6px; /* cantos arredondados */
-}
-
-.submenu li {
-    width: 100%; /* ocupa toda a largura do submenu */
+    border-radius: 6px;
 }
 
 .submenu li a {
     display: block;
-    padding: 0.6rem 1rem; /* espaçamento dentro de cada link */
+    padding: 0.6rem 1rem;
     color: #8b949e;
-    white-space: nowrap; /* impede que o texto quebre linha */
+    white-space: nowrap;
 }
 
 .submenu li a:hover {
-    background: #23232e; /* muda o fundo ao passar o mouse */
+    background: #23232e;
     color: #58a6ff;
 }
 
-/* Quando passar o mouse sobre o item principal, mostra o submenu */
 .dropdown:hover .submenu {
     display: flex;
 }
 
-/* ==========================
-   MENU HAMBÚRGUER (MOBILE)
-   ========================== */
 .burger {
-    display: none; /* só aparece no mobile */
+    display: none;
     cursor: pointer;
     flex-direction: column;
     gap: 5px;
@@ -127,9 +99,6 @@ nav {
     border-radius: 2px;
 }
 
-/* ==========================
-   CONTEÚDO PRINCIPAL (HERO)
-   ========================== */
 .hero {
     padding: 3rem 2rem;
     max-width: 900px;
@@ -147,11 +116,8 @@ nav {
     color: #8b949e;
 }
 
-/* ==========================
-   CURSOR PISCANTE
-   ========================== */
 .cursor {
-    animation: blink 1s infinite; /* faz o cursor piscar */
+    animation: blink 1s infinite;
 }
 
 @keyframes blink {
@@ -159,9 +125,6 @@ nav {
     50.01%, 100% { opacity: 0; }
 }
 
-/* ==========================
-   RODAPÉ
-   ========================== */
 footer {
     text-align: center;
     padding: 1rem;
@@ -172,9 +135,6 @@ footer {
     color: #8b949e;
 }
 
-/* ==========================
-   RESPONSIVIDADE (TELAS MENORES)
-   ========================== */
 @media (max-width: 999px) {
     .nav-links {
         position: absolute;
@@ -186,12 +146,10 @@ footer {
         height: 0;
         overflow: hidden;
         transition: height 0.3s ease-in;
-       
-
     }
 
     .nav-links.open {
-        height: auto; /* abre o menu */
+        height: auto;
         padding: 1rem 0;
     }
 
@@ -200,10 +158,9 @@ footer {
     }
 
     .burger {
-        display: flex; /* mostra o menu hambúrguer */
+        display: flex;
     }
 
-    /* Submenu no mobile flui dentro do menu */
     .submenu {
         position: static;
         border: none;
@@ -213,31 +170,6 @@ footer {
     }
 
     .submenu.active {
-        display: flex; /* aparece quando clicado */
+        display: flex;
     }
-    footer{
-       margin-top: 200px;
-    }
-    .h1{
-        text-align: justify;
-        position: relative;
-        left: 50px;
-        top: 100px;
-    }
-    .main{
-        position: absolute;
-        top: 50px;              /*mesmo caso do h1*/
-        left: 0px;
-        transform: translateY(-50%);
-    }
-    .container{
-        position: relative;
-        left: 50px;
-        top: 100px;             
-        right: 100px;
-        bottom: 100px;
-    }
-    
-    
 }
-
