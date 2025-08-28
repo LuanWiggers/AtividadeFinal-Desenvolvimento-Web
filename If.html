@@ -1,66 +1,154 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Atividade Final-Desenvolvimento Web</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atividades - If e While</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.activity-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #161b22;
+    color: #c9d1d9;
+    border-radius: 8px;
+}
+.activity-container h2{
+    color: #58a6ff;
+    text-align: center;
+}
+.activity-container button{
+    margin: 5px 0;
+    padding: 8px 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+pre{
+    background-color: #23232e;
+    color: #c9d1d9;
+    padding: 10px;
+    max-height: 300px;
+    overflow: auto;
+}
+</style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Atividade final<span></span></div>
-            <ul class="nav-links">
-    <li><a href="index.html">Início</a></li>
 
-    <!-- Estruturas Condicionais -->
-    <li class="dropdown">
-        <a href="#conditionalstructures">Estruturas Condicionais ▾</a>
-        <ul class="submenu">
-            <li><a href="If.html">If</a></li>
-            <li><a href="else.html">Else</a></li>
-            <li><a href="switch.html">Switch / Case</a></li>
+<header>
+    <nav>
+        <div class="logo">Atividade final<span></span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li class="dropdown">
+                <a href="#conditionalstructures">Estruturas Condicionais ▾</a>
+                <ul class="submenu">
+                    <li><a href="If.html">If</a></li>
+                    <li><a href="else.html">Else</a></li>
+                    <li><a href="switch.html">Switch / Case</a></li>
+                </ul>
+            </li>
         </ul>
-    </li>
+    </nav>
+</header>
 
-    <!-- Estruturas de Repetição -->
-    <li class="dropdown">
-        <a href="#loops">Estruturas de Repetição ▾</a>
-        <ul class="submenu">
-            <li><a href="while.html">While</a></li>
-            <li><a href="do.html">Do While</a></li>
-            <li><a href="for.html">For</a></li>
-        </ul>
-    </li>
+<main class="terminal-window">
 
-    <!-- Vetores -->
-    <li class="dropdown">
-        <a href="#array">Vetores ▾</a>
-        <ul class="submenu">
-            <li><a href="unidimensional.html">Unidimensional</a></li>
-            <li><a href="bidimensional.html">Bidimensional</a></li>
-        </ul>
-    </li>
-</ul>
+    <!-- Atividade 1 -->
+    <section class="activity-container">
+        <h2>Atividade 1 - Cálculo da Média de Aluno (If)</h2>
+        <p>
+            Desenvolva uma aplicação web que, a partir de 3 notas de um aluno,
+            informadas pelo usuário, calcule a sua média e de acordo com a mesma 
+            emita a situação do aluno: <br>
+            <strong>Aprovado</strong>: média &gt;= 7 <br>
+            <strong>Recuperação</strong>: 5 &lt;= média &lt; 7 <br>
+            <strong>Reprovado</strong>: média &lt; 5
+        </p>
+        <button onclick="mostrarCodigo('codigoArea1')">Ver Código</button>
+        <pre id="codigoArea1" style="display:none;">
+&lt;form name="frmnotas" onsubmit="procFormulario(); return false;"&gt;
+    Nota 01: &lt;input type="text" id="num1"&gt;&lt;br&gt;
+    Nota 02: &lt;input type="text" id="num2"&gt;&lt;br&gt;
+    Nota 03: &lt;input type="text" id="num3"&gt;&lt;br&gt;
+    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;
 
-        </nav>
-    </header>
+&lt;div id="resultado"&gt;&lt;/div&gt;
 
-   <main>
-    
-        <div class="terminal-window">
-            <h1>If</h1>
-            <p>conteúdo sobre a estrutura <strong>if</strong>.</p>
-        </div>
-    
+&lt;script&gt;
+function procFormulario(){
+    let n1 = parseFloat(document.getElementById('num1').value);
+    let n2 = parseFloat(document.getElementById('num2').value);
+    let n3 = parseFloat(document.getElementById('num3').value);
+    let media = (n1+n2+n3)/3;
+    let situacao = "";
+
+    if(media >= 7){
+        situacao = "Aprovado";
+    } else if(media >=5 && media < 7){
+        situacao = "Recuperação";
+    } else {
+        situacao = "Reprovado";
+    }
+    document.getElementById('resultado').innerHTML = "Média: "+media.toFixed(2)+"&lt;br&gt; Situação: "+situacao;
+}
+&lt;/script&gt;
+        </pre>
+        <button onclick="executarPagina('codigoArea1')">Executar Página</button>
+    </section>
+
+    <!-- Atividade 2 -->
+    <section class="activity-container">
+        <h2>Atividade 2 - Cálculo do Fatorial (While)</h2>
+        <p>
+            Desenvolva uma aplicação web que, a partir de um número fornecido pelo usuário,
+            calcule o seu fatorial utilizando a estrutura de repetição <strong>while</strong>.
+        </p>
+        <button onclick="mostrarCodigo('codigoArea2')">Ver Código</button>
+        <pre id="codigoArea2" style="display:none;">
+&lt;form onsubmit="calcularFatorial(); return false;"&gt;
+    Número: &lt;input type="text" id="num"&gt;&lt;br&gt;
+    &lt;button type="submit"&gt;Calcular&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;div id="resultado2"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+function calcularFatorial(){
+    let n = parseInt(document.getElementById('num').value);
+    let resultado = 1;
+    let i = 1;
+    while(i <= n){
+        resultado *= i;
+        i++;
+    }
+    document.getElementById('resultado2').innerHTML = "Fatorial de "+n+" é "+resultado;
+}
+&lt;/script&gt;
+        </pre>
+        <button onclick="executarPagina('codigoArea2')">Executar Página</button>
+    </section>
+
 </main>
 
-    <footer>
-        <p>&copy; 2025 Atividade Final-Desenvolvimento WEB . Todos os direitos reservados LWO.</p>
-    </footer>
+<footer>
+    <p>&copy; 2025 Atividade Final-Desenvolvimento WEB . Todos os direitos reservados LWO.</p>
+</footer>
 
-    <script src="js/valproc.js"></script>
+<script>
+function mostrarCodigo(id){
+    const area = document.getElementById(id);
+    area.style.display = area.style.display === 'none' ? 'block' : 'none';
+}
+
+function executarPagina(id){
+    const codigoHTML = document.getElementById(id).innerText;
+    document.open();
+    document.write(codigoHTML);
+    document.close();
+}
+</script>
+
 </body>
 </html>
