@@ -226,7 +226,7 @@ footer {
     }
     .main{
         position: absolute;
-        top: 50px;              /*mesmo caso do h1*/
+        top: 50px;              
         left: 0px;
         transform: translateY(-50%);
     }
