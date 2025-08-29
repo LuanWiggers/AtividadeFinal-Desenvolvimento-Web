@@ -1,66 +1,375 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Atividade Final-Desenvolvimento Web</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Atividade 2 - Else</title>
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		.activity-container {
+			max-width: 800px;
+			margin: 20px auto;
+			padding: 20px;
+			background-color: #161b22;
+			color: #c9d1d9;
+			border-radius: 8px;
+		}
+
+		.activity-container h2 {
+			color: #58a6ff;
+			text-align: center;
+		}
+
+		.activity-container button {
+			margin: 5px 0;
+			padding: 8px 15px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		pre {
+			background-color: #23232e;
+			color: #c9d1d9;
+			padding: 10px;
+			max-height: 300px;
+			overflow: auto;
+		}
+	</style>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div class="logo">Atividade final<span></span></div>
-            <ul class="nav-links">
-    <li><a href="index.html">Início</a></li>
 
-    <!-- Estruturas Condicionais -->
-    <li class="dropdown">
-        <a href="#conditionalstructures">Estruturas Condicionais ▾</a>
-        <ul class="submenu">
-            <li><a href="If.html">If</a></li>
-            <li><a href="else.html">Else</a></li>
-            <li><a href="switch.html">Switch / Case</a></li>
-        </ul>
-    </li>
+	<header>
+		<nav>
+			<div class="logo">Atividade final<span></span></div>
+			<ul class="nav-links">
+				<li><a href="index.html">Início</a></li>
+				<li class="dropdown">
+					<a href="#conditionalstructures">Estruturas Condicionais ▾</a>
+					<ul class="submenu">
+						<li><a href="If.html">If</a></li>
+						<li><a href="Switch.html">Switch / Case</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
 
-    <!-- Estruturas de Repetição -->
-    <li class="dropdown">
-        <a href="#loops">Estruturas de Repetição ▾</a>
-        <ul class="submenu">
-            <li><a href="while.html">While</a></li>
-            <li><a href="do.html">Do While</a></li>
-            <li><a href="for.html">For</a></li>
-        </ul>
-    </li>
+	<main class="terminal-window">
+		<section class="activity-container">
+			<h2>Atividade 1 - Switch Case</h2>
+			<p>
+				Desenvolva uma aplicação web que peça um número inteiro e diga se ele é (Bebê, criança, adolescente).
 
-    <!-- Vetores -->
-    <li class="dropdown">
-        <a href="#array">Vetores ▾</a>
-        <ul class="submenu">
-            <li><a href="unidimensional.html">Unidimensional</a></li>
-            <li><a href="bidimensional.html">Bidimensional</a></li>
-        </ul>
-    </li>
-</ul>
+			</p>
+			<form>
+				<center>
+					<br>
+					<!--Abrindo o componente textarea que, por sua vez, conterá
+            os elementos que serão visualizados e executados na página.-->
+					<textarea name="fonte" cols="70" rows="20">
+               <html>
+                <head>
+                    <meta charset="UTF-8">
+                    <title>Estrutura CASO JavaScript - Atividade 1</title>
+                </head>
+               <body>
+                <section>
+                    <h2>Estruturas Caso (Switch() - Atividade 1)</h2>
+                    <font face="arial">
+                        <form name="frmnumint" action="#" method="get" onsubmit="return procFormulario()">
+                        
+                            <fieldset class="cadnumint">
+                                
+                                <legend>Entrada de dados</legend>
+                                <br>
+                                <label for="numint">Informe um número inteiro :</label>
+                                <input type="text" name="txtnumint" id="numint"><br><br>
+                                <button type="reset">Limpar</button><button type="submit">Enviar</button>
+            
+                                
+                            </fieldset>
+                        </form>
+                    </font>
+            </section>
+            </body>
+            <style>/*Configurações gerais*/
 
-        </nav>
-    </header>
+                section{
+                
+                    margin-top:0px auto;
+                }
+                /*Configuração da página*/
+                
+                .cadnumint{
+                
+                    width: 300px;
+                    margin: 0px auto;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+                
+                .cadnumint input{
+                
+                    margin: 5px auto;
+                    width: 100%;
+                    padding: 5px 0;
+                }
+                .cadnumint button{
+                
+                    width: 30%;
+                    margin: 0 10%;
+                    background-color: #b1ccf5;
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+                label{
+                    float: left;
+                }
+                h2{
+                    text-align: center;
+                    margin-top: 0px;
+                    margin-bottom: 10px;
+                    font-size: 50px;
+                    
+                }</style>
 
-   <main>
-    
-        <div class="terminal-window">
-            <h2>switch/case</h2>
-            <p>conteúdo sobre a estrutura <strong>switch/case</strong>.</p>
-        </div>
-    
-</main>
+                   <script>
 
-    <footer>
-        <p>&copy; 2025 Atividade Final-Desenvolvimento WEB . Todos os direitos reservados LWO.</p>
-    </footer>
 
-    <script src="js/valproc.js"></script>
-</body>
-</html>
+					function procFormulario() {
+						if (document.frmnumint.txtnumint.value == "") {
+							alert("Preencha o campo número inteiro");
+							document.frmnumint.focus();
+							return false;
+						} else {
+							let numint = parseInt(document.getElementById('numint').value)
+							switch (true) {
+								case (numint >= 0 && numint <= 3):
+
+									console.log("Bebê");
+									return false;
+									break;
+
+								case (numint >= 4 && numint <= 10):
+									console.log("Criança");
+									return false;
+									break;
+
+								case (numint >= 11 && numint <= 18):
+
+									console.log("Adolescente");
+									return false;
+									break;
+
+
+
+									/*case 0:
+									case 1:
+									case 2:
+									case 3:
+											//alert("Bebê")
+											console.log("Bebê");
+											return false;
+									break;
+									case 4:
+									case 5:
+									case 6:
+									case 7:
+									case 8:
+									case 9:
+									case 10:
+											//alert("Criança");
+											console.log("Criança");
+											return false;
+									break;
+									case 11:
+									case 12:
+									case 13:
+									case 14:
+									case 15:
+									case 16:
+									case 17:
+									case 18:
+											//alert("Adolescente")
+											console.log("Adolescente")
+											return false;*/
+									break;
+							}
+						}
+					}
+
+				</script>
+
+               </body>
+               </html>
+
+            </textarea><!--Finalizando o componente textarea-->
+					<br><br>
+					<input type="button" value="Testar sua página" onclick="document.write(fonte.value);">
+
+			</form>
+
+
+			</center>
+
+</body><!--Finalizando a tag body da página principal-->
+</html><!--Fechando a tag principal da página-->
+
+<main class="terminal-window">
+	<section class="activity-container">
+		<h2>Atividade 2 - Switch Case</h2>
+		<p>
+			Desenvolva uma calculadora básica.
+
+		</p>
+		<form>
+			<center>
+				<br>
+				<!--Abrindo o componente textarea que, por sua vez, conterá
+		os elementos que serão visualizados e executados na página.-->
+				<textarea name="fonte" cols="70" rows="20">
+		   <html>
+			<head>
+				<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+				<title>Calculadora Simples</title>
+			</head>
+		   <body>
+			<div class="calculadora">
+				<h1>Calculadora Simples</h1>
+		
+				<label for="num1">Número 1:</label>
+				<input type="numero" id="num1" required>
+		
+				<label for="num2">Número 2:</label>
+				<input type="numero" id="num2" required>
+		
+				<label for="operacao">Operação:</label>
+				<select id="operacao">
+					<option value="soma">Soma (+)</option>
+					<option value="subtracao">Subtração (-)</option>
+					<option value="multiplicacao">Multiplicação (*)</option>
+					<option value="divisao">Divisão (/)</option>
+				</select>
+		
+				<button onclick="calculadora()">Calcular</button>
+		
+				<div id="result-area"></div>
+			</div>
+		</body>
+		<style>/*Configurações gerais*/
+
+			section{
+			
+				margin-top:0px auto;
+			}
+			/*Configuração da página*/
+			
+			.cadnumint{
+			
+				width: 300px;
+				margin: 0px auto;
+				font-weight: bold;
+				margin-bottom: 10px;
+			}
+			
+			.cadnumint input{
+			
+				margin: 5px auto;
+				width: 100%;
+				padding: 5px 0;
+			}
+			.cadnumint button{
+			
+				width: 30%;
+				margin: 0 10%;
+				background-color: #b1ccf5;
+				font-weight: bold;
+				font-size: 16px;
+			}
+			label{
+				float: left;
+			}
+			h2{
+				text-align: center;
+				margin-top: 0px;
+				margin-bottom: 10px;
+				font-size: 50px;
+				
+			}</style>
+
+			   <script>
+
+function calculadora() {
+    const num1 = parseFloat(document.getElementById('num1').value);
+    const num2 = parseFloat(document.getElementById('num2').value);
+    const operation = document.getElementById('operacao').value;
+    const resultArea = document.getElementById('result-area');
+
+    // Limpar resultados anteriores
+    resultArea.innerHTML = '';
+
+    // Validação de entrada dos numeros
+    if (isNaN(num1) || isNaN(num2)) {
+        resultArea.innerHTML = '<p style="color: red;">Por favor, insira números válidos.</p>';
+        return;
+    }
+
+    let result;
+    let operationText = ''; // Para armazenar a representação textual da operação
+
+    switch (operation) {
+        case 'soma':
+            result = num1 + num2;
+            operationText = 'Soma';
+            break;
+        case 'subtracao':
+            result = num1 - num2;
+            operationText = 'Subtração';
+            break;
+        case 'multiplicacao':
+            result = num1 * num2;
+            operationText = 'Multiplicação';
+            break;
+        case 'divisao':
+            if (num2 === 0) {
+                resultArea.innerHTML = '<p style="color: red;">Não é possível dividir por zero.</p>';
+                return;
+            }
+            result = num1 / num2;
+            operationText = 'Divisão';
+            break;
+        default:
+            resultArea.innerHTML = '<p style="color: red;">Operação inválida.</p>';
+            return;
+    }
+
+    const parity = (result % 2 === 0) ? 'Par' : 'Ímpar';
+
+    resultArea.innerHTML += `<p><strong>Operação escolhida:</strong> ${operationText}</p>`;
+    resultArea.innerHTML += `<p><strong>Números digitados:</strong> ${num1} e ${num2}</p>`;
+    resultArea.innerHTML += `<p><strong>Resultado:</strong> ${result}</p>`;
+    resultArea.innerHTML += `<p><strong>O resultado é:</strong> ${parity}</p>`;
+}
+
+			</script>
+
+		   </body>
+		   </html>
+
+		</textarea><!--Finalizando o componente textarea-->
+				<br><br>
+				<input type="button" value="Testar sua página" onclick="document.write(fonte.value);">
+
+		</form>
+
+
+		</center>
+
+		</body><!--Finalizando a tag body da página principal-->
+
+		</html><!--Fechando a tag principal da página-->
+
+		

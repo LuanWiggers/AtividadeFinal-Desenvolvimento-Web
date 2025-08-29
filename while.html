@@ -1,66 +1,493 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Atividade Final-Desenvolvimento Web</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2 - Else</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .activity-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #161b22;
+            color: #c9d1d9;
+            border-radius: 8px;
+        }
+
+        .activity-container h2 {
+            color: #58a6ff;
+            text-align: center;
+        }
+
+        .activity-container button {
+            margin: 5px 0;
+            padding: 8px 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        pre {
+            background-color: #23232e;
+            color: #c9d1d9;
+            padding: 10px;
+            max-height: 300px;
+            overflow: auto;
+        }
+    </style>
 </head>
+
 <body>
+
     <header>
         <nav>
             <div class="logo">Atividade final<span></span></div>
             <ul class="nav-links">
-    <li><a href="index.html">Início</a></li>
-
-    <!-- Estruturas Condicionais -->
-    <li class="dropdown">
-        <a href="#conditionalstructures">Estruturas Condicionais ▾</a>
-        <ul class="submenu">
-            <li><a href="If.html">If</a></li>
-            <li><a href="else.html">Else</a></li>
-            <li><a href="switch.html">Switch / Case</a></li>
-        </ul>
-    </li>
-
-    <!-- Estruturas de Repetição -->
-    <li class="dropdown">
-        <a href="#loops">Estruturas de Repetição ▾</a>
-        <ul class="submenu">
-            <li><a href="while.html">While</a></li>
-            <li><a href="do.html">Do While</a></li>
-            <li><a href="for.html">For</a></li>
-        </ul>
-    </li>
-
-    <!-- Vetores -->
-    <li class="dropdown">
-        <a href="#array">Vetores ▾</a>
-        <ul class="submenu">
-            <li><a href="unidimensional.html">Unidimensional</a></li>
-            <li><a href="bidimensional.html">Bidimensional</a></li>
-        </ul>
-    </li>
-</ul>
-
+                <li><a href="index.html">Início</a></li>
+                <li class="dropdown">
+                    <a href="#conditionalstructures">Estruturas Condicionais ▾</a>
+                    <ul class="submenu">
+                        <li><a href="If.html">If</a></li>
+                        <li><a href="Switch.html">Switch / Case</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
     </header>
 
-   <main>
-    
-        <div class="terminal-window">
-            <h2>while</h2>
-            <p>conteúdo sobre a estrutura <strong>while</strong>.</p>
-        </div>
-    
-</main>
+    <main class="terminal-window">
+        <section class="activity-container">
+            <h2>Atividade 1 - While</h2>
+            <p>
+                Atividade 1 - Faça um algoritimo que leia 3 números e imprima a somatória - estrutura "while".
 
-    <footer>
-        <p>&copy; 2025 Atividade Final-Desenvolvimento WEB . Todos os direitos reservados LWO.</p>
-    </footer>
+            </p>
+            <form>
+                <center>
+                    <br>
+                    <!--Abrindo o componente textarea que, por sua vez, conterá
+            os elementos que serão visualizados e executados na página.-->
+                    <textarea name="fonte" cols="70" rows="20">
+               <html>
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    
+                    <title>Estrutura-Se</title>
+                </head>
+               <body>
+                <section>
+                    <h2>Atividade 1 - Faça um algoritimo que leia 3 números e imprima a somatória - estrutura "while"</h2>
+                    <font face = "arial">
+                        <form name="frmnumint" action="#" method="get" onsubmit="return procFormulario()">
+                            <fieldset class="cadinteiro">
+                                <button type="submit">Enviar</button>
+                            </fieldset>
+                        </form>
+                    </font>
+                </section>
+            </body>
+            <style>/*Configurações gerais*/
 
-    <script src="js/valproc.js"></script>
-</body>
-</html>
+                section{
+                
+                    margin-top:0px auto;
+                }
+                /*Configuração da página*/
+                
+                .cadnumint{
+                
+                    width: 300px;
+                    margin: 0px auto;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+                
+                .cadnumint input{
+                
+                    margin: 5px auto;
+                    width: 100%;
+                    padding: 5px 0;
+                }
+                .cadnumint button{
+                
+                    width: 30%;
+                    margin: 0 10%;
+                    background-color: #b1ccf5;
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+                label{
+                    float: left;
+                }
+                h2{
+                    text-align: center;
+                    margin-top: 0px;
+                    margin-bottom: 10px;
+                    font-size: 50px;
+                    
+                }</style>
+
+                   <script>
+
+
+                    function procFormulario() {
+                        let cont = 1
+                        let soma = 0
+                        while (cont < 4) {
+                            soma += parseFloat(prompt("Digite o " + cont + "º valor: "))
+                            console.log(cont + "º passagem - Soma atual: " + soma)
+                            cont++
+
+                        }
+                        return false;
+                    }
+
+                </script>
+
+               </body>
+               </html>
+
+            </textarea><!--Finalizando o componente textarea-->
+                    <br><br>
+                    <input type="button" value="Testar sua página" onclick="document.write(fonte.value);">
+
+            </form>
+
+
+            </center>
+
+</body><!--Finalizando a tag body da página principal-->
+
+</html><!--Fechando a tag principal da página-->
+
+<main class="terminal-window">
+    <section class="activity-container">
+        <h2>Atividade 2 - while</h2>
+        <p>
+            Desenvolva uma aplicação web que peça 3 números e descubra o maior entre eles.
+
+        </p>
+        <form>
+            <center>
+                <br>
+                <!--Abrindo o componente textarea que, por sua vez, conterá
+		os elementos que serão visualizados e executados na página.-->
+                <textarea name="fonte" cols="70" rows="20">
+		   <html>
+			<head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+			</head>
+		   <body>
+			<section>
+                <form name="frmTabuada" action="#" method="get" onsubmit="return calcMedia()">
+                    <fieldset class="cadinteiro">
+                        <legend>Informe 3 número e eu descobrirei o maior entre eles</legend>
+                        <label>Valor 1</label>
+                        <input type="text" name="campoVal1" id="inptVal1">
+                        <label>Valor 2</label>
+                        <input type="text" name="campoVal2" id="inptVal2">
+                        <label>Valor 3</label>
+                        <input type="text" name="campoVal3" id="inptVal3">
+                        <button type="reset">limpar</button><button type="submit">Enviar</button>
+                    </fieldset>
+                </form>
+            </section>
+		</body>
+		<style>/*Configurações gerais*/
+
+			section{
+			
+				margin-top:0px auto;
+			}
+			/*Configuração da página*/
+			
+			.cadnumint{
+			
+				width: 300px;
+				margin: 0px auto;
+				font-weight: bold;
+				margin-bottom: 10px;
+			}
+			
+			.cadnumint input{
+			
+				margin: 5px auto;
+				width: 100%;
+				padding: 5px 0;
+			}
+			.cadnumint button{
+			
+				width: 30%;
+				margin: 0 10%;
+				background-color: #b1ccf5;
+				font-weight: bold;
+				font-size: 16px;
+			}
+			label{
+				float: left;
+			}
+			h2{
+				text-align: center;
+				margin-top: 0px;
+				margin-bottom: 10px;
+				font-size: 50px;
+				
+			}</style>
+
+			   <script>
+                function calcMedia() {
+                    let v1 = 0, v2 = 0, v3 = 0, valorMaior = 0
+                    let maiorCampo = ""
+                    console.clear()
+                    v1 = parseInt(document.getElementById("inptVal1").value)
+                    v2 = parseInt(document.getElementById("inptVal2").value)
+                    v3 = parseInt(document.getElementById("inptVal3").value)
+                    if (v1 == v2 & v3 < v1 & v3 < v2) { console.log("Valor 01: " + v1 + " e Valor 02: " + v2 + " São iguais! Maior valor: " + v1); return false; }
+                    if (v1 == v3 & v2 < v1 & v2 < v3) { console.log("Valor 01: " + v1 + " e Valor 03: " + v3 + " São iguais! Maior valor: " + v1); return false; }
+                    if (v3 == v2 & v1 < v3 & v1 < v2) { console.log("Valor 02: " + v3 + " e Valor 03: " + v2 + " São iguais! Maior valor: " + v3); return false; }
+
+                    if (v1 > valorMaior & v1 != valorMaior) { valorMaior = v1; maiorCampo = "Valor 1" }
+                    if (v2 > valorMaior & v2 != valorMaior) { valorMaior = v2; maiorCampo = "Valor 2" }
+                    if (v3 > valorMaior & v3 != valorMaior) { valorMaior = v3; maiorCampo = "Valor 3" }
+
+                    console.log(maiorCampo + " | Maior valor: " + valorMaior)
+
+                    return false;
+                }
+
+            </script>
+
+		   </body>
+		   </html>
+
+		</textarea><!--Finalizando o componente textarea-->
+                <br><br>
+                <input type="button" value="Testar sua página" onclick="document.write(fonte.value);">
+
+        </form>
+
+
+        </center>
+
+        </body><!--Finalizando a tag body da página principal-->
+
+        </html><!--Fechando a tag principal da página-->
+
+        <main class="terminal-window">
+            <section class="activity-container">
+                <h2>Atividade 3 - while</h2>
+                <p>
+                    Faça uma aplicação web na qual você insira 3 números e receba o retorno
+
+                </p>
+                <form>
+                    <center>
+                        <br>
+                        <!--Abrindo o componente textarea que, por sua vez, conterá
+                os elementos que serão visualizados e executados na página.-->
+                        <textarea name="fonte" cols="70" rows="20">
+                   <html>
+                    <head>
+                        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+                    </head>
+                   <body>
+                    <section>
+                        <form name="frmTabuada" action="#" method="get" onsubmit="return calcMedia()">
+                            <section>
+                                <form name="frmTabuada" action="#" method="get" onsubmit="return calcMedia()">
+                                    <fieldset class="cadinteiro">
+                                        <legend>Informe 3 número e eu farei a soma dos três</legend>
+                                        <label>Valor 1</label>
+                                        <input type="text" name="campoVal1" id="inptVal1">
+                                        <label>Valor 2</label>
+                                        <input type="text" name="campoVal2" id="inptVal2">
+                                        <label>Valor 3</label>
+                                        <input type="text" name="campoVal3" id="inptVal3">
+                                        <button type="reset">limpar</button><button type="submit">Enviar</button>
+                                    </fieldset>
+                        </form>
+                    </section>
+                </body>
+                <style>/*Configurações gerais*/
+        
+                    section{
+                    
+                        margin-top:0px auto;
+                    }
+                    /*Configuração da página*/
+                    
+                    .cadnumint{
+                    
+                        width: 300px;
+                        margin: 0px auto;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+                    
+                    .cadnumint input{
+                    
+                        margin: 5px auto;
+                        width: 100%;
+                        padding: 5px 0;
+                    }
+                    .cadnumint button{
+                    
+                        width: 30%;
+                        margin: 0 10%;
+                        background-color: #b1ccf5;
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
+                    label{
+                        float: left;
+                    }
+                    h2{
+                        text-align: center;
+                        margin-top: 0px;
+                        margin-bottom: 10px;
+                        font-size: 50px;
+                        
+                    }</style>
+        
+                       <script>
+                        function calcMedia() {
+                            let soma = 0
+                            console.clear()
+                            v1 = parseInt(document.getElementById("inptVal1").value)
+                            v2 = parseInt(document.getElementById("inptVal2").value)
+                            v3 = parseInt(document.getElementById("inptVal3").value)
+
+                            if (v1 % 5 == 0 & v1 > 0) { soma += v1 }
+                            if (v2 % 5 == 0 & v2 > 0) { soma += v2 }
+                            if (v3 % 5 == 0 & v3 > 0) { soma += v3 }
+
+                            console.log("Soma dos valores: " + soma)
+
+                            return false;
+                        }
+
+                    </script>
+        
+                   </body>
+                   </html>
+        
+                </textarea><!--Finalizando o componente textarea-->
+                        <br><br>
+                        <input type="button" value="Testar sua página" onclick="document.write(fonte.value);">
+
+                </form>
+
+
+                </center>
+
+                </body><!--Finalizando a tag body da página principal-->
+
+                </html><!--Fechando a tag principal da página-->
+                <main class="terminal-window">
+                    <section class="activity-container">
+                        <h2>Atividade Exemplo - Switch Case</h2>
+                        <p>
+                            Exibe inteiros de 1 a 10 - estrutura "while"
+                        </p>
+                        <form>
+                            <center>
+                                <br>
+                                <!--Abrindo o componente textarea que, por sua vez, conterá
+                        os elementos que serão visualizados e executados na página.-->
+                                <textarea name="fonte" cols="70" rows="20">
+                           <html>
+                            <head>
+                                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Estrutura-While</title>
+                            </head>
+                           <body>
+                            <section>
+                                <h2>Exemplo - Exibe inteiros de 1 a 10 - estrutura "while"</h2>
+                                <font face = "arial">
+                                    <form name="frmnumint" action="#" method="get" onsubmit="return procFormulario()">
+                                        <fieldset class="cadinteiro">
+                                            <div id="resultado"></div>
+                                            <button type="submit">Enviar</button>
+                                        </fieldset>
+                                    </form>
+                                </font>
+                            </section>
+                        </body>
+                        <style>/*Configurações gerais*/
+                
+                            section{
+                            
+                                margin-top:0px auto;
+                            }
+                            /*Configuração da página*/
+                            
+                            .cadnumint{
+                            
+                                width: 300px;
+                                margin: 0px auto;
+                                font-weight: bold;
+                                margin-bottom: 10px;
+                            }
+                            
+                            .cadnumint input{
+                            
+                                margin: 5px auto;
+                                width: 100%;
+                                padding: 5px 0;
+                            }
+                            .cadnumint button{
+                            
+                                width: 30%;
+                                margin: 0 10%;
+                                background-color: #b1ccf5;
+                                font-weight: bold;
+                                font-size: 16px;
+                            }
+                            label{
+                                float: left;
+                            }
+                            h2{
+                                text-align: center;
+                                margin-top: 0px;
+                                margin-bottom: 10px;
+                                font-size: 50px;
+                                
+                            }</style>
+                
+                               <script>
+
+                                function procFormulario() {
+                                    let cont = 1
+                                    while (cont < 11) {
+                                        //if(cont%2==0){
+                                        console.log("Valor do contador: " + cont)
+                                        //}
+                                        cont++
+                                    }
+                                    return false;
+                                }
+
+                            </script>
+                
+                           </body>
+                           </html>
+                
+                        </textarea><!--Finalizando o componente textarea-->
+                                <br><br>
+                                <input type="button" value="Testar sua página" onclick="document.write(fonte.value);">
+
+                        </form>
+
+
+                        </center>
+
+                        </body><!--Finalizando a tag body da página principal-->
+
+                        </html><!--Fechando a tag principal da página-->

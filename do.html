@@ -1,66 +1,170 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Atividade Final-Desenvolvimento Web</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2 - Else</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .activity-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #161b22;
+            color: #c9d1d9;
+            border-radius: 8px;
+        }
+
+        .activity-container h2 {
+            color: #58a6ff;
+            text-align: center;
+        }
+
+        .activity-container button {
+            margin: 5px 0;
+            padding: 8px 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        pre {
+            background-color: #23232e;
+            color: #c9d1d9;
+            padding: 10px;
+            max-height: 300px;
+            overflow: auto;
+        }
+    </style>
 </head>
+
 <body>
+
     <header>
         <nav>
             <div class="logo">Atividade final<span></span></div>
             <ul class="nav-links">
-    <li><a href="index.html">Início</a></li>
-
-    <!-- Estruturas Condicionais -->
-    <li class="dropdown">
-        <a href="#conditionalstructures">Estruturas Condicionais ▾</a>
-        <ul class="submenu">
-            <li><a href="If.html">If</a></li>
-            <li><a href="else.html">Else</a></li>
-            <li><a href="switch.html">Switch / Case</a></li>
-        </ul>
-    </li>
-
-    <!-- Estruturas de Repetição -->
-    <li class="dropdown">
-        <a href="#loops">Estruturas de Repetição ▾</a>
-        <ul class="submenu">
-            <li><a href="while.html">While</a></li>
-            <li><a href="do.html">Do While</a></li>
-            <li><a href="for.html">For</a></li>
-        </ul>
-    </li>
-
-    <!-- Vetores -->
-    <li class="dropdown">
-        <a href="#array">Vetores ▾</a>
-        <ul class="submenu">
-            <li><a href="unidimensional.html">Unidimensional</a></li>
-            <li><a href="bidimensional.html">Bidimensional</a></li>
-        </ul>
-    </li>
-</ul>
-
+                <li><a href="index.html">Início</a></li>
+                <li class="dropdown">
+                    <a href="#conditionalstructures">Estruturas Condicionais ▾</a>
+                    <ul class="submenu">
+                        <li><a href="If.html">If</a></li>
+                        <li><a href="Switch.html">Switch / Case</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
     </header>
 
-   <main>
-    
-        <div class="terminal-window">
-            <h2>Do</h2>
-            <p>conteúdo sobre a estrutura <strong>Do</strong>.</p>
-        </div>
-    
-</main>
+    <main class="terminal-window">
+        <section class="activity-container">
+            <h2>Atividade 1 - Do</h2>
+            <p>
+                Atividade 1 - Para-faça
 
-    <footer>
-        <p>&copy; 2025 Atividade Final-Desenvolvimento WEB . Todos os direitos reservados LWO.</p>
-    </footer>
+            </p>
+            <form>
+                <center>
+                    <br>
+                    <!--Abrindo o componente textarea que, por sua vez, conterá
+            os elementos que serão visualizados e executados na página.-->
+                    <textarea name="fonte" cols="70" rows="20">
+               <html>
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                </head>
+               <body>
+                <section>
+                    <h2>Atividade 1 - para-faça</h2>
+                    <font face = "arial">
+                        <form name="frmnumint" action="#" method="get" onsubmit="return procFormulario()">
+                            <fieldset class="cadinteiro">
+                                <legend>Entrada de dados</legend>
+                                <label>Tabuada do: </label>
+                                <input type="text" name="campoVal" id="inptVal">
+                                <button type="reset">limpar</button><button type="submit">Enviar</button>
+                            </fieldset>
+                        </form>
+                    </font>
+                </section>
+            </body>
+            <style>/*Configurações gerais*/
 
-    <script src="js/valproc.js"></script>
-</body>
-</html>
+                section{
+                
+                    margin-top:0px auto;
+                }
+                /*Configuração da página*/
+                
+                .cadnumint{
+                
+                    width: 300px;
+                    margin: 0px auto;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+                
+                .cadnumint input{
+                
+                    margin: 5px auto;
+                    width: 100%;
+                    padding: 5px 0;
+                }
+                .cadnumint button{
+                
+                    width: 30%;
+                    margin: 0 10%;
+                    background-color: #b1ccf5;
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+                label{
+                    float: left;
+                }
+                h2{
+                    text-align: center;
+                    margin-top: 0px;
+                    margin-bottom: 10px;
+                    font-size: 50px;
+                    
+                }</style>
+
+                   <script>
+
+function valida() {
+    
+    if(numeroBase = document.getElementById('num1').value==""){
+        alert("Preencha o campo com um número inteiro");
+        document.frmnumint.focus();
+        return false;
+    }else{
+        let num1=parseInt(document.getElementById('num1').value)
+        for (let i = 1; i <= 10; i++) {
+            let result = num1 * i;   
+            console.log(num1+"x" + i + "="+result);
+        }
+        return false;
+
+    }
+
+}
+
+                </script>
+
+               </body>
+               </html>
+
+            </textarea><!--Finalizando o componente textarea-->
+                    <br><br>
+                    <input type="button" value="Testar sua página" onclick="document.write(fonte.value);">
+
+            </form>
+
+
+            </center>
+
+</body><!--Finalizando a tag body da página principal-->
+
+</html><!--Fechando a tag principal da página-->
+
