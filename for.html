@@ -1,65 +1,275 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Atividade Final-Desenvolvimento Web</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios For</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .activity-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #161b22;
+            color: #c9d1d9;
+            border-radius: 8px;
+        }
+
+        .activity-container h2 {
+            color: #58a6ff;
+            text-align: center;
+        }
+
+        .activity-container button {
+            margin: 5px 0;
+            padding: 8px 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        pre {
+            background-color: #23232e;
+            color: #c9d1d9;
+            padding: 10px;
+            max-height: 300px;
+            overflow: auto;
+        }
+    </style>
 </head>
+
 <body>
+
     <header>
         <nav>
             <div class="logo">Atividade final<span></span></div>
             <ul class="nav-links">
-    <li><a href="index.html">Início</a></li>
-
-    <!-- Estruturas Condicionais -->
-    <li class="dropdown">
-        <a href="#conditionalstructures">Estruturas Condicionais ▾</a>
-        <ul class="submenu">
-            <li><a href="If.html">If</a></li>
-            <li><a href="switch.html">Switch / Case</a></li>
-        </ul>
-    </li>
-
-    <!-- Estruturas de Repetição -->
-    <li class="dropdown">
-        <a href="#loops">Estruturas de Repetição ▾</a>
-        <ul class="submenu">
-            <li><a href="while.html">While</a></li>
-            <li><a href="do.html">Do While</a></li>
-            <li><a href="for.html">For</a></li>
-        </ul>
-    </li>
-
-    <!-- Vetores -->
-    <li class="dropdown">
-        <a href="#array">Vetores ▾</a>
-        <ul class="submenu">
-            <li><a href="unidimensional.html">Unidimensional</a></li>
-            <li><a href="bidimensional.html">Bidimensional</a></li>
-        </ul>
-    </li>
-</ul>
-
+                <li><a href="index.html">Início</a></li>
+                <li class="dropdown">
+                    <a href="#loops">Estruturas de Repetição ▾</a>
+                    <ul class="submenu">
+                        <li><a href="while.html">While</a></li>
+                        <li><a href="do.html">Do while</a></li>
+                        <li><a href="for.html">For</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
     </header>
 
-   <main>
-    
-        <div class="terminal-window">
-            <h2>For</h2>
-            <p>conteúdo sobre a estrutura <strong>for</strong>.</p>
-        </div>
-    
-</main>
+    <main class="terminal-window">
+        <section class="activity-container">
+            <h2>Atividade 1 - Tabuada - Estrutura "para"...(for)</h2>
+            <p>
+                Atividade 1 - Tabuada utilizando a estrutura para-faça
+            </p>
+            <form>
+                <center>
+                    <br>
+                    <!--Abrindo o componente textarea que, por sua vez, conterá
+            os elementos que serão visualizados e executados na página.-->
+                    <textarea name="fonte" cols="70" rows="20">
+               <html>
+                <head>
+                    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+                </head>
+               <body>
+                <section>
+                    <h2>Atividade 1 - Tabuada - Estrutura "para"...(for)</h2>
+                    <font face = "arial">
+                        <!-- Realizar a somatória de números fornecidos pelo usuário através do prompt-->
+                <form name="frmsomanumero" action="#" method="get" onsubmit="return validaProc()">
+                    <fieldset class="cadinteiro">
+                        <legend>Entrada de dados</legend>
+                        <label>Tabuada for: </label>
+                        <input type="text" name="campoVal" id="inptVal">
+                        <button type="reset">limpar</button><button type="submit">Enviar</button>
+                    </fieldset>
+                </form>
+                    </font>
+                </section>
+            </body>
+            <style>/*Configurações gerais*/
 
-    <footer>
-        <p>&copy; 2025 Atividade Final-Desenvolvimento WEB . Todos os direitos reservados LWO.</p>
-    </footer>
+                section{
+                
+                    margin-top:0px auto;
+                }
+                /*Configuração da página*/
+                
+                .cadnumint{
+                
+                    width: 300px;
+                    margin: 0px auto;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+                
+                .cadnumint input{
+                
+                    margin: 5px auto;
+                    width: 100%;
+                    padding: 5px 0;
+                }
+                .cadnumint button{
+                
+                    width: 30%;
+                    margin: 0 10%;
+                    background-color: #b1ccf5;
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+                label{
+                    float: left;
+                }
+                h2{
+                    text-align: center;
+                    margin-top: 0px;
+                    margin-bottom: 10px;
+                    font-size: 50px;
+                    
+                }</style>
 
-    <script src="js/valproc.js"></script>
-</body>
-</html>
+                   <script>
+
+function calcTabuada(){
+    let valor = document.getElementById("inptVal").value
+
+    if(valor > 0){
+        console.log("Número selecionado: "+valor)
+        for(let i=1; i<=10; i++){
+            console.log(valor+" x "+i+" = "+(valor*i))
+        }
+    }else{
+        console.log("Valor: "+valor)
+        if(valor==""){
+            alert("Digite um número!")
+        }else{
+            alert("Número inválido!")
+        }
+    }
+    return false;
+}
+                    
+
+                </script>
+
+               </body>
+               </html>
+
+            </textarea><!--Finalizando o componente textarea-->
+                    <br><br>
+                    <input type="button" value="Testar sua página" onclick="document.write(fonte.value);">
+
+            </form>
+
+
+            </center>
+
+</body><!--Finalizando a tag body da página principal-->
+
+</html><!--Fechando a tag principal da página-->
+
+<main class="terminal-window">
+    <section class="activity-container">
+        <h2>Atividade Exemplo - For</h2>
+        <p>
+            Atividade Exemplo - Exibe números inteiros
+        </p>
+        <form>
+            <center>
+                <br>
+                <!--Abrindo o componente textarea que, por sua vez, conterá
+		os elementos que serão visualizados e executados na página.-->
+                <textarea name="fonte" cols="70" rows="20">
+		   <html>
+			<head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Atividade Exemplo-estrutura for</title>
+			</head>
+		   <body>
+			<section>
+                <form name="frmTabuada" action="#" method="get" onsubmit="return calcTabuada()">
+                    <fieldset class="cadinteiro">
+                        <legend>Entrada de Dados</legend>
+                        <br>
+                        <div id="resultado"></div>
+                        <button type="submit">Enviar</button>
+                    </fieldset>
+                </form>
+            </section>
+		</body>
+		<style>/*Configurações gerais*/
+
+			section{
+			
+				margin-top:0px auto;
+			}
+			/*Configuração da página*/
+			
+			.cadnumint{
+			
+				width: 300px;
+				margin: 0px auto;
+				font-weight: bold;
+				margin-bottom: 10px;
+			}
+			
+			.cadnumint input{
+			
+				margin: 5px auto;
+				width: 100%;
+				padding: 5px 0;
+			}
+			.cadnumint button{
+			
+				width: 30%;
+				margin: 0 10%;
+				background-color: #b1ccf5;
+				font-weight: bold;
+				font-size: 16px;
+			}
+			label{
+				float: left;
+			}
+			h2{
+				text-align: center;
+				margin-top: 0px;
+				margin-bottom: 10px;
+				font-size: 50px;
+				
+			}</style>
+
+			   <script>
+               function procFormulario(){
+    let val = 1
+    for(let i=10; i>0; i--){       
+        console.log("Valor de i: "+i)
+        
+    }
+    
+    return false;
+}
+
+            </script>
+
+		   </body>
+		   </html>
+
+		</textarea><!--Finalizando o componente textarea-->
+                <br><br>
+                <input type="button" value="Testar sua página" onclick="document.write(fonte.value);">
+
+        </form>
+
+
+        </center>
+
+        </body><!--Finalizando a tag body da página principal-->
+
+        </html><!--Fechando a tag principal da página-->
+
+        

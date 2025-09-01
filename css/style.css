@@ -5,6 +5,9 @@
 }
 
 body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
     font-family: 'Source Code Pro', monospace;
     background-color: #0d1117;
     color: #c9d1d9;
@@ -133,7 +136,9 @@ footer {
     margin-top: 2rem;
     font-size: 0.9rem;
     color: #8b949e;
+    margin-top: auto;
 }
+
 
 @media (max-width: 999px) {
     .nav-links {
@@ -172,4 +177,5 @@ footer {
     .submenu.active {
         display: flex;
     }
+
 }
