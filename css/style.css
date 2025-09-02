@@ -59,9 +59,9 @@ nav {
 
 .submenu {
     list-style: none;
-    position: absolute;
+    position:absolute;
     top: 100%;
-    left: 0;
+    left: -50px;
     background: #161b22;
     border: 1px solid #30363d;
     display: none;
@@ -136,6 +136,8 @@ footer {
     margin-top: 2rem;
     font-size: 0.9rem;
     color: #8b949e;
+    padding: 16px;
+    display: auto;
     margin-top: auto;
 }
 
