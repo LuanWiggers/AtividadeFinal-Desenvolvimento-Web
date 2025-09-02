@@ -59,7 +59,7 @@
 
     <main class="terminal-window">
         <section class="activity-container">
-            <h2>Atividade 1 - While</h2>
+            <h2>Atividade 1 - Faça um algoritimo que leia 3 números e imprima a somatória - estrutura "while"</h2>
             <p>
                 Atividade 1 - Faça um algoritimo que leia 3 números e imprima a somatória - estrutura "while".
 
@@ -165,7 +165,8 @@
 
 <main class="terminal-window">
     <section class="activity-container">
-        <h2>Atividade 2 - while</h2>
+        <h2>Atividade 2 - Faça uma algoritmo que peça 3 números e retorne o maior entre eles utilizando
+            (enquanto)"while"</h2>
         <p>
             Desenvolva uma aplicação web que peça 3 números e descubra o maior entre eles.
 
@@ -280,9 +281,10 @@
 
         <main class="terminal-window">
             <section class="activity-container">
-                <h2>Atividade 3 - while</h2>
+                <h2>Atividade 3 - Uma escola tem 3 turmas e cada turma tem n alunos. Crie um programa que escreva, o
+                    total de alunos, por turma, com média superior ou igual a 7 e a média geral da escola.</h2>
                 <p>
-                    Faça uma aplicação web na qual você insira 3 números e receba o retorno
+                    Faça uma aplicação utilizando estrutura enquanto (while)
 
                 </p>
                 <form>
@@ -392,7 +394,7 @@
                 </html><!--Fechando a tag principal da página-->
                 <main class="terminal-window">
                     <section class="activity-container">
-                        <h2>Atividade Exemplo - While</h2>
+                        <h2>Atividade Exemplo - "While", exibir números de 1 a 10.</h2>
                         <p>
                             Exibe inteiros de 1 a 10 - estrutura "while"
                         </p>
@@ -464,15 +466,33 @@
                 
                                <script>
 
-                                function procFormulario() {
-                                    let cont = 1
-                                    while (cont < 11) {
-                                        //if(cont%2==0){
-                                        console.log("Valor do contador: " + cont)
-                                        //}
-                                        cont++
-                                    }
-                                    return false;
+
+                                function calcularMedias() {
+                                    let turma = 1;
+                                    let totalAlunosAcima7 = 0;
+                                    let somaMediasEscola = 0;
+                                    let totalAlunosEscola = 0;
+
+                                    do {
+                                        // Considerando apenas 1 aluno por turma
+                                        let media = parseFloat(prompt("Digite a média do único aluno da Turma " + turma + ":"));
+
+                                        somaMediasEscola += media;
+                                        totalAlunosEscola++;
+
+                                        if (media >= 7) {
+                                            totalAlunosAcima7++;
+                                        }
+
+                                        console.log("Turma " + turma + ": média do aluno = " + media);
+
+                                        turma++;
+                                    } while (turma <= 3);
+
+                                    let mediaGeralEscola = somaMediasEscola / totalAlunosEscola;
+
+                                    console.log("Total de alunos com média >= 7: " + totalAlunosAcima7);
+                                    console.log("Média geral da escola: " + mediaGeralEscola.toFixed(2));
                                 }
 
                             </script>

@@ -58,7 +58,8 @@
 
     <main class="terminal-window">
         <section class="activity-container">
-            <h2>Atividade 1 - Matriz</h2>
+            <h2>Atividade 1 - Matriz 3x3 de valores inteiros, multiplicada por um número inserido e retornada reescrita.
+            </h2>
             <p>
                 Alimentar uma matriz (3x3) de valores inteiros, multiplicando essa matriz por um
                 valor informado pelo usuário e escrevendo o conteúdo da matriz multiplicada.
@@ -185,7 +186,7 @@
 
 <main class="terminal-window">
     <section class="activity-container">
-        <h2>Atividade 2 - Matriz</h2>
+        <h2>Atividade 2 - Matriz, imprimir soma de uma linha da matriz escolhida pelo usuário.</h2>
         <p>
             Construa um algoritmo para ler uma matriz (2x2) de inteiros
             e imprimir a soma dos elementos de uma linha fornecida
@@ -303,7 +304,7 @@
 
         <main class="terminal-window">
             <section class="activity-container">
-                <h2>Atividade 3 - Matriz</h2>
+                <h2>Atividade 3 - Matriz, valor dos elementos é a soma dos índices da posição.</h2>
                 <p>
                     Crie uma matriz (2x2) onde o valor de cada elemento dentro de matriz é a soma dos índices da sua
                     posição.
@@ -428,7 +429,7 @@
 
                 <main class="terminal-window">
                     <section class="activity-container">
-                        <h2>Atividade 4 - Matriz</h2>
+                        <h2>Atividade 4 - Matriz, matriz 4x3 alimentada pelo usuário</h2>
                         <p>
                             Criar, alimentar e imprimir os dados de uma matriz 2x3
                         </p>
@@ -602,25 +603,33 @@
                                             let linhas = 3;
                                             let colunas = 3;
 
-                                            //Alimentar a matriz
+                                            // Alimentar a matriz
 
                                             for (i = 0; i < linhas; i++) {
 
                                                 matriz[i] = []
                                                 for (c = 0; c < colunas; c++) {
+
                                                     matriz[i][c] = parseInt(prompt("Digite o valor da linha " + i + " e coluna " + c));
+
                                                 }
+
                                             }
+
                                             //Imprimindo os dados da matriz
 
                                             for (i = 0; i < linhas; i++) {
-                                                for (c = 0; c < colunas; i++) {
 
-                                                    document.write(matriz[i][c] + "kldsjakdj");
+                                                for (c = 0; c < colunas; c++) {
+
+                                                    document.write(matriz[i][c] + " ");
 
                                                 }
+
                                                 document.write("<br>");
+
                                             }
+
                                             return false;
 
                                         }

@@ -122,6 +122,9 @@ nav {
 .cursor {
     animation: blink 1s infinite;
 }
+p{
+    text-align: justify;
+}
 
 @keyframes blink {
     0%, 50% { opacity: 1; }
